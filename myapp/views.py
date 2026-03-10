@@ -13,7 +13,20 @@ from django.http import Http404
 
 def home_screen_view(request):
     print(request.headers)
-    return render(request, "polls/home.html", {})
+
+    # context = {
+    # "variable": "value"
+    # }      
+
+    context = {}
+    # context["variable"] = "value's"
+
+    list_of_values = [1,2,3,4,5]
+    context["list_of_values"] = list_of_values
+
+
+    
+    return render(request, "polls/home.html", context)
 
 
 # def index(request):
