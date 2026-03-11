@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.urls import path
 
 from myapp.views import (home_screen_view)
-from account.views import (registration_view, logout_view)
+from account.views import (registration_view, logout_view, login_view)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', registration_view, name='register'),
     path('logout/', logout_view, name='logout'),
+    path('login/', login_view, name='login'),
     # path('polls/', include('myapp.urls')), include,
     path("",home_screen_view,name="home"),
     # path("index",index,name="index")
