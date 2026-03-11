@@ -18,17 +18,22 @@ from django.utils import timezone
 #     def __str__(self):
 #         return self.
 
-PRIORITY = [
-    ("L","Low"),
-    ("M","Medium"),
-    ("H","High"),
-]
+# PRIORITY = [
+#     ("L","Low"),
+#     ("M","Medium"),
+#     ("H","High"),
+# ]
 
-class Question(models.Model):
-    title       = models.CharField(max_length=200)
-    question    = models.TextField()
-    priority    = models.CharField(max_length=1,choices = PRIORITY)
+# class Question(models.Model):
+#     title       = models.CharField(max_length=200)
+#     question    = models.TextField()
+#     priority    = models.CharField(max_length=1,choices = PRIORITY)
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
+
+#     class Meta:
+#         verbose_name = "The Question"
+#         verbose_name_plural = "People Questions"
+#         # ordering = ['-id']  
     

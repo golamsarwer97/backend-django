@@ -2,9 +2,10 @@
 
 from django.http import HttpResponse
 from django.template import loader
-from .models import Question
+# from .models import Question
 from django.shortcuts import render, get_object_or_404
 from django.http import Http404
+from account.models import Account
 
 # def index(request):
 #     return HttpResponse("Hello, Django. You're at the polls index.")
@@ -21,9 +22,11 @@ def home_screen_view(request):
     context = {}
     # context["variable"] = "value's"
 
-    list_of_values = [1,2,3,4,5]
-    context["list_of_values"] = list_of_values
+    # list_of_values = [1,2,3,4,5]
+    # context["list_of_values"] = list_of_values
 
+    account = Account.objects.all()
+    context["account"] = account
 
     
     return render(request, "polls/home.html", context)

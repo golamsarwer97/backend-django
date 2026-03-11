@@ -5,12 +5,11 @@
 <div style="border: 2px solid #000000; padding: 10px; margin: 0px;">
     <h1>Home</h1>
     <p>This is the home page. Where all courses will be listed with there details.</p>
+    <!-- <h1>{{ question }}</h1> -->
 
-    {{ variable }}
-
-    {% for value in list_of_values %}
+    {% for value in account %}
     <!-- <p>{{ value }}</p> -->
-    {% include 'polls/snippets/body_snippet.html' with variable=value %}
+    <p>{{value}}</p>
     {% endfor %}
 
 
